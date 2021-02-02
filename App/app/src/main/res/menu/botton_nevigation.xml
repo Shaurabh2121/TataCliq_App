@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+    <item android:id="@+id/menu_categories"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="Categories"/>
+    <item android:id="@+id/menu_brand"
+        android:icon="@drawable/ic_brand"
+        android:title="Brands"/>
+    <item android:id="@+id/menu_my_account"
+        android:icon="@drawable/ic_account"
+        android:title="My Account"/>
+    <item android:id="@+id/menu_my_bags"
+        android:icon="@drawable/ic_bag"
+        android:title="My Bag"/>
+</menu>
