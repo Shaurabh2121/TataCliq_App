@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvV1, mTvV2, mTvV3;
     private View mIvCliq;
     private Handler handler;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         mTvV2 = findViewById(R.id.v2);
         mTvV3 = findViewById(R.id.v3);
         mIvCliq = findViewById(R.id.ivClick);
-
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
@@ -37,4 +34,4 @@ public class MainActivity extends AppCompatActivity {
         }, 1000);
 
     }
-    }
+}

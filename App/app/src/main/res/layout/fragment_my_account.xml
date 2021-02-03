@@ -1,14 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/account_color"
     android:layout_height="match_parent"
     tools:context=".MyAccountFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="100dp"
+            android:id="@+id/vlogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/tata_sib"
+            android:layout_height="50dp"/>
 
-    <!-- TODO: Update blank fragment layout -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_baseline_cancel_24"/>
+    </RelativeLayout>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:hint="Enter Email"
+    android:id="@+id/etEmail"
+    android:textSize="20dp"
+    android:layout_marginEnd="30dp"
+    android:background="@drawable/rectangle_line"
+    android:layout_marginStart="30dp"
+    android:textColorHint="#A19898"
+    android:textColor="@color/white"/>
+<View
+    android:layout_width="match_parent"
+    android:background="#A19898"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_height="2dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Password"
+        android:id="@+id/etPassword"
+        android:textSize="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle_line"
+        android:layout_marginStart="30dp"
+        android:textColorHint="#A19898"
+        android:textColor="@color/white"/>
+    <View
+        android:layout_width="match_parent"
+        android:background="#A19898"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="2dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password?"
+        android:layout_gravity="end"
+        android:textColor="@color/white"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:background="@drawable/rectangle_round"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="center"
+        android:text="New to Tata CLiQ?SING UP"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_round_white"
+        android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="70dp"
+        android:gravity="center"
+        android:layout_marginStart="70dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Sign in with your social account"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:drawableStart="@drawable/ic_facebook"
+            android:paddingStart="15dp"
+            android:text="Facabook"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:background="@drawable/rectangle_round_new_white"
+            android:layout_marginStart="50dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:paddingStart="15dp"
+            android:text="Google"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ic_flat_color_icons_google"
+            android:background="@drawable/rectangle_round_new_white"
+            android:layout_marginEnd="50dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="15dp"
+    android:weightSum="2"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Call Us"
+        android:id="@+id/tvCallUs"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="T C - Privacy Policy"
+        android:layout_weight="1"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/tvTAndCondition"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</LinearLayout>
