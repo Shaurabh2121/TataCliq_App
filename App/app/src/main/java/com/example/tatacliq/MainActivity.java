@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView mTvV1, mTvV2, mTvV3;
-    private ImageView mIvCliq;
+    private View mIvCliq;
     private Handler handler;
 
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mTvV1 = findViewById(R.id.v1);
         mTvV2 = findViewById(R.id.v2);
         mTvV3 = findViewById(R.id.v3);
-        mIvCliq = findViewById(R.id.ivCliq);
+        mIvCliq = findViewById(R.id.ivClick);
 
         handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -37,4 +38,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
     }
-}
