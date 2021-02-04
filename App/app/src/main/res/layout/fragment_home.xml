@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:text="Welcome"
         android:textColor="@color/white"
+        android:textSize="16dp"
         android:textStyle="bold"
-        android:textSize="20dp"
         android:drawableEnd="@drawable/ic_baseline_search_24"
         android:background="@color/black"
         android:paddingTop="15dp"
@@ -23,7 +23,7 @@
         android:paddingBottom="15dp"
         android:gravity="center"/>
     <View
-        android:layout_width="60dp"
+        android:layout_width="45dp"
         android:layout_height="25dp"
         android:background="@drawable/tata_sib"
         android:layout_marginTop="20dp"
