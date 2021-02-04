@@ -1,13 +1,14 @@
-package com.example.tatacliq;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.tatacliq.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.tatacliq.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         mTvV1 = findViewById(R.id.v1);
         mTvV2 = findViewById(R.id.v2);
         mTvV3 = findViewById(R.id.v3);
-        mIvCliq = findViewById(R.id.ivClick);
+        mIvCliq = findViewById(R.id.ivCliq);
+
         handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
