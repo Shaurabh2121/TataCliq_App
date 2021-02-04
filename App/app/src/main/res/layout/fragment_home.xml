@@ -32,31 +32,179 @@
             android:background="@drawable/tata_sib" />
     </RelativeLayout>
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-              <androidx.recyclerview.widget.RecyclerView
-                  android:id="@+id/recyclerWestSide"
-                  android:layout_width="match_parent"
-                  tools:itemCount="1"
-                  android:layout_marginBottom="5dp"
-                  android:layout_height="match_parent"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerWestSide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                tools:itemCount="1" />
 
-              <androidx.viewpager2.widget.ViewPager2
-                  android:id="@+id/viewPagerImageSlider"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:paddingStart="30dp"
-                  android:paddingEnd="30dp"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerImageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp" />
 
-          </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/relativeSBI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp">
 
-  </ScrollView>
+                <View
+                    android:id="@+id/vSBI"
+                    android:layout_width="40dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_sbilogo" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tvVerticalLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@id/vSBI"
+                    android:background="@drawable/vertical_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/tvVerticalLine"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/tv_discount"
+                        android:textColor="@color/purple_discount"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/tv_credit_card"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="TC apply"
+                        android:textColor="@color/black"
+                        android:textSize="5sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/deep_pink_led" />
+
+                <ImageView
+                    android:id="@+id/tvCoupleDress"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="65dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/couple_dress" />
+
+                <TextView
+                    android:id="@+id/tvUpToOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:layout_below="@id/tvCoupleDress"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tv_upTo"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="75dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/tvGadget"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="65dp"
+                    android:layout_toEndOf="@id/tvCoupleDress"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/electronic_gadget" />
+
+                <TextView
+                    android:id="@+id/tvUpToTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_upTo"
+                    android:textSize="10dp"
+                    android:layout_below="@id/tvGadget"
+                    android:layout_toEndOf="@id/tvUpToOne"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="150dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDiscount70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_off70"
+                    android:layout_below="@id/tvUpToOne"
+                    android:textSize="26sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="50dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDiscount85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_off85"
+                    android:textSize="26sp"
+                    android:layout_below="@id/tvUpToTwo"
+                    android:layout_toEndOf="@id/tvDiscount70"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="65dp"
+                    />
+
+            </RelativeLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_marginTop="10dp"
+               android:layout_height="70dp"
+               android:background="@drawable/new_on_cliq"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
