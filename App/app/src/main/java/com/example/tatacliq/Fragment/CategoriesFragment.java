@@ -1,4 +1,4 @@
-package com.example.tatacliq;
+package com.example.tatacliq.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.tatacliq.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BrandsFragment#newInstance} factory method to
+ * Use the {@link CategoriesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BrandsFragment extends Fragment {
+public class CategoriesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class BrandsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public BrandsFragment() {
+    public CategoriesFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class BrandsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BrandsFragment.
+     * @return A new instance of fragment CategoriesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BrandsFragment newInstance(String param1, String param2) {
-        BrandsFragment fragment = new BrandsFragment();
+    public static CategoriesFragment newInstance(String param1, String param2) {
+        CategoriesFragment fragment = new CategoriesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class BrandsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_brands, container, false);
+        return inflater.inflate(R.layout.fragment_categories, container, false);
     }
 }
