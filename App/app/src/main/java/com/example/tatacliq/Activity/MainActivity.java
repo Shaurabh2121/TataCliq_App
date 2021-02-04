@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTvV1, mTvV2, mTvV3;
     private View mIvCliq;
     private Handler handler;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
