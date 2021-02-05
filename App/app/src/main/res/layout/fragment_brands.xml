@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="CLiQ Favourites"
             android:paddingStart="15dp"
-            android:textSize="28dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             />
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:text="Brands For You"
             android:paddingStart="15dp"
-            android:textSize="28dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:text="New on CLiQ"
             android:paddingStart="15dp"
-            android:textSize="28dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
         <androidx.recyclerview.widget.RecyclerView
@@ -100,6 +100,51 @@
             android:layout_width="match_parent"
             android:layout_marginBottom="5dp"
             tools:itemCount="1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brands To Know"
+            android:paddingStart="15dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/ivGuessKnow"
+            android:src="@drawable/guess_know"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/ivDknyKnow"
+            android:src="@drawable/dkny_know"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/ivPoliceKnow"
+            android:src="@drawable/police"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Smartphone Brands To Own"
+            android:paddingStart="15dp"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewBrandToOwnSmartphone"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            tools:itemCount="3"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 

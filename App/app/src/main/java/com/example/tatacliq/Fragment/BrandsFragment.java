@@ -27,6 +27,8 @@ import com.example.tatacliq.BrandSldeItem.BrandSlideModel;
 import com.example.tatacliq.R;
 import com.example.tatacliq.SlideItem.SliderAdapter;
 import com.example.tatacliq.SlideItem.SliderItem;
+import com.example.tatacliq.SmartphoneBrandsToOwn.SmartPhoneAdapter;
+import com.example.tatacliq.SmartphoneBrandsToOwn.SmartphoneModel;
 import com.example.tatacliq.WestSideRecyclerView.WestSideAdapter;
 import com.example.tatacliq.WestSideRecyclerView.WestsideItemClass;
 
@@ -44,6 +46,8 @@ public class BrandsFragment extends Fragment {
   private List<OnResponseModel>onResponseModelList;
   private OnAdapter onAdapter;
   private RecyclerView mRecyclerViewOn;
+  private List<SmartphoneModel>smartphoneModelList;
+  private RecyclerView mRecyclerSmartPhone;
     public BrandsFragment() {
         // Required empty public constructor
     }
@@ -60,14 +64,38 @@ public class BrandsFragment extends Fragment {
         mviewPager2=view.findViewById(R.id.viewPagerImageSliderBrand);
         recyclerView=view.findViewById(R.id.recyclerBrandForYou);
         mRecyclerViewOn=view.findViewById(R.id.recyclerBrandNewOnCliq);
+        mRecyclerSmartPhone=view.findViewById(R.id.recycleViewBrandToOwnSmartphone);
         setBrandSliderAdapter();
         setBrandSliderData();
         buildBrand4uData();
         setRecyclerAdapterBrand4uData();
         buildBrandOnNewCliqData();
         setRecyclerAdapterBrandOnNewCliqData();
+        buildSmartPhoneData();
+        setRecyclerAdapterSmartPhone();
 
 
+
+    }
+
+    private void setRecyclerAdapterSmartPhone() {
+        GridLayoutManager linearLayoutManager=new GridLayoutManager(getContext(),3,RecyclerView.VERTICAL,false);
+        SmartPhoneAdapter smartPhoneAdapter =new SmartPhoneAdapter(smartphoneModelList);
+        mRecyclerSmartPhone.setLayoutManager(linearLayoutManager);
+        mRecyclerSmartPhone.setAdapter(smartPhoneAdapter);
+    }
+
+    private void buildSmartPhoneData() {
+        smartphoneModelList=new ArrayList<>();
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.sumsung_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.realme_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.oppo_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.xiaomi_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.apple_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.nokia_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.moto_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.huawei_own));
+        smartphoneModelList.add(new SmartphoneModel(R.drawable.lenovo_own));
     }
 
     private void setRecyclerAdapterBrandOnNewCliqData() {
