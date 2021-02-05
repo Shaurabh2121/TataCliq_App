@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.CategoriesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,158 +39,158 @@
 
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_marginBottom="15dp"
-      android:layout_marginTop="15dp"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="10dp"
       android:layout_height="match_parent"
       android:orientation="vertical">
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvWomenFashion"
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Women's Fashion"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvMenFashion"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Men's Fashion"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvElectronics"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Electronics"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvMobilePhone"
 
           android:paddingBottom="10dp"
           android:paddingStart="10dp"
-          android:paddingEnd="10dp"
+          android:paddingEnd="8dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Mobile Phones"/>
       <TextView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:textColor="@color/black"
-      android:paddingTop="10dp"
+      android:paddingTop="8dp"
           android:id="@+id/tvTvAndAppliances"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
       android:paddingStart="10dp"
       android:paddingEnd="10dp"
       android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-      android:textSize="18dp"
-      android:text="tv and Appliances"/>
+      android:textSize="16dp"
+      android:text="@string/tv_appliance"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvKidsFashion"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Kid's Fashion"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
-          android:paddingBottom="10dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:id="@+id/tvJewellery"
 
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Jewellery"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvConnectedHomes"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Connected Homes"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
+          android:paddingTop="8dp"
           android:id="@+id/tvHomeFurnishing"
 
-          android:paddingBottom="10dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Home Furnishings"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
-          android:paddingBottom="10dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Fragrances"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
-          android:paddingBottom="10dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Hair Care and Styling"/>
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/black"
-          android:paddingTop="10dp"
-          android:paddingBottom="10dp"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
           android:paddingStart="10dp"
           android:paddingEnd="10dp"
           android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
-          android:textSize="18dp"
+          android:textSize="16dp"
           android:text="Men's Grooming"/>
   </LinearLayout>
 

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".Fragment.HomeFragment">
 
@@ -112,22 +113,29 @@
                 </LinearLayout>
 
             </RelativeLayout>
-
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:id="@+id/constraint"
                 android:layout_height="match_parent">
+
 
                 <ImageView
                     android:layout_width="match_parent"
+                    android:id="@+id/ivBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/deep_pink_led" />
 
                 <ImageView
-                    android:id="@+id/tvCoupleDress"
-                    android:layout_width="150dp"
+                    android:id="@+id/ivCoupleDress"
+                    android:layout_width="130dp"
                     android:layout_height="150dp"
-                    android:layout_marginStart="20dp"
                     android:layout_marginTop="65dp"
+                    app:layout_constraintEnd_toStartOf="@id/ivGadget"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/couple_dress" />
 
@@ -136,21 +144,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="10dp"
-                    android:layout_below="@id/tvCoupleDress"
+                    app:layout_constraintTop_toBottomOf="@id/ivCoupleDress"
                     android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toStartOf="@id/ivGadget"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:text="@string/tv_upTo"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_marginStart="75dp"
                     />
 
                 <ImageView
-                    android:id="@+id/tvGadget"
-                    android:layout_width="150dp"
+                    android:id="@+id/ivGadget"
+                    android:layout_width="130dp"
                     android:layout_height="150dp"
-                    android:layout_marginStart="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivCoupleDress"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="65dp"
-                    android:layout_toEndOf="@id/tvCoupleDress"
                     android:scaleType="centerCrop"
                     android:src="@drawable/electronic_gadget" />
 
@@ -160,12 +172,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tv_upTo"
                     android:textSize="10dp"
-                    android:layout_below="@id/tvGadget"
+                    app:layout_constraintStart_toEndOf="@id/ivCoupleDress"
+                    app:layout_constraintTop_toBottomOf="@id/ivGadget"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_toEndOf="@id/tvUpToOne"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_marginStart="150dp"
                     />
 
                 <TextView
@@ -173,11 +186,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/tv_off70"
-                    android:layout_below="@id/tvUpToOne"
+                    app:layout_constraintEnd_toStartOf="@id/ivGadget"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvUpToOne"
                     android:textSize="26sp"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_marginStart="50dp"
                     />
 
                 <TextView
@@ -186,14 +200,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tv_off85"
                     android:textSize="26sp"
-                    android:layout_below="@id/tvUpToTwo"
-                    android:layout_toEndOf="@id/tvDiscount70"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivCoupleDress"
+                    app:layout_constraintTop_toBottomOf="@id/tvUpToTwo"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:layout_marginStart="65dp"
                     />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </RelativeLayout>
+
 
            <View
                android:layout_width="match_parent"
