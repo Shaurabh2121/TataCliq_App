@@ -15,6 +15,10 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.tatacliq.BrandNewOnCliq.OnAdapter;
+import com.example.tatacliq.BrandNewOnCliq.OnResponseModel;
+import com.example.tatacliq.PersonalBasicsStuffs.PersonalBasicAdapter;
+import com.example.tatacliq.PersonalBasicsStuffs.PersonalBasicStuffs;
 import com.example.tatacliq.R;
 import com.example.tatacliq.SlideItem.SliderAdapter;
 import com.example.tatacliq.SlideItem.SliderItem;
@@ -22,7 +26,10 @@ import com.example.tatacliq.WestSideRecyclerView.WestSideAdapter;
 import com.example.tatacliq.WestSideRecyclerView.WestsideItemClass;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 
 public class HomeFragment extends Fragment {
@@ -32,6 +39,12 @@ public class HomeFragment extends Fragment {
     private List<SliderItem> sliderItemList;
     private ViewPager2 viewPager2;
     private Handler sliderHandler = new Handler();
+    private List<OnResponseModel>onResponseModelList;
+    private OnAdapter onAdapter;
+    private RecyclerView mRecyclerViewOn;
+    private RecyclerView mRecyclerBasicStuffs;
+    private List<PersonalBasicStuffs> personalBasicStuffsList;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,11 +58,18 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mRecyclerWestSide = view.findViewById(R.id.recyclerWestSide);
         viewPager2 = view.findViewById(R.id.viewPagerImageSlider);
+        mRecyclerViewOn=view.findViewById(R.id.recyclerBrandNewOnCliq);
+        mRecyclerBasicStuffs=view.findViewById(R.id.recyclerBasicStuffs);
         setWestSideRecyclerAdapter();
         setWestSideRecyclerData();
         setSliderAdapter();
         setSliderData();
+        buildBrandOnNewCliqData();
+        setRecyclerAdapterBrandOnNewCliqData();
+        buildBasicStuffs();
+        setRecyclerAdapterBasicStuffs();
     }
+
 
     private void setSliderData() {
         viewPager2.setAdapter(new SliderAdapter(sliderItemList, viewPager2));
@@ -110,12 +130,11 @@ public class HomeFragment extends Fragment {
     }
 
     private void setWestSideRecyclerData() {
-
-        GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(), 1, RecyclerView.HORIZONTAL, false);
+        GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(), 1,
+                RecyclerView.HORIZONTAL, false);
         WestSideAdapter westSideAdapter = new WestSideAdapter(westsideItemClassList);
         mRecyclerWestSide.setLayoutManager(linearLayoutManager);
         mRecyclerWestSide.setAdapter(westSideAdapter);
-
     }
 
     private void setWestSideRecyclerAdapter() {
@@ -135,4 +154,45 @@ public class HomeFragment extends Fragment {
     }
 
 
-}
+    private void buildBrandOnNewCliqData() {
+        onResponseModelList = new ArrayList<>();
+
+        onResponseModelList.add(new OnResponseModel(R.drawable.kenkon_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.s21_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.true_frog_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.k_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.polo_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.airpods_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.the_moms_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.earpods_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.traq_on));
+        onResponseModelList.add(new OnResponseModel(R.drawable.vivo_on));
+//        onResponseModelList.add(new OnResponseModel(R.drawable.taneira));
+    }
+
+    private void setRecyclerAdapterBrandOnNewCliqData() {
+        GridLayoutManager linearLayoutManager=new GridLayoutManager(getContext(),1,RecyclerView.HORIZONTAL,false);
+        onAdapter=new OnAdapter(onResponseModelList);
+        mRecyclerViewOn.setLayoutManager(linearLayoutManager);
+        mRecyclerViewOn.setAdapter(onAdapter);
+    }
+
+    private void buildBasicStuffs() {
+        personalBasicStuffsList=new ArrayList<>();
+
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.basicskin,"COMFORTABLE LINGERIE","A selection of lingerie that fits like","no other.","Explore"));
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.basicdryer,"PERSONAL BASICS","Personal care basics for you to","look your best.","Explore"));
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.basicwatch,"STYLISH WATCHES","Stunning timepieces that are sure","to make a mark.","Explore"));
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.jewellery,"JEWELLERY SELECTION","Precious piece that bring together","tradition and trend","Explore"));
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.basicheadphones,"AUDIO ESSENTIAL","CliQ to get access to the best in","the world","Explore"));
+        personalBasicStuffsList.add(new PersonalBasicStuffs(R.drawable.basicfragrance,"BEST OF FRAGRANCES","Fragrance guaranteed to put the","spring in your step","Explore"));
+    }
+
+        private void setRecyclerAdapterBasicStuffs() {
+
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(getContext(),1,RecyclerView.HORIZONTAL,false);
+            PersonalBasicAdapter adapter=new PersonalBasicAdapter(personalBasicStuffsList);
+            mRecyclerBasicStuffs.setLayoutManager(gridLayoutManager);
+            mRecyclerBasicStuffs.setAdapter(adapter);
+        }
+    }
