@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="5dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBasicStuffs"
+            android:layout_width="200dp"
+            android:scaleType="fitXY"
+            android:layout_height="220dp"
+            android:src="@drawable/basicskin"
+            />
+
+        <TextView
+            android:id="@+id/tvStuffsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confortable Lingerie"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"/>
+
+        <TextView
+            android:id="@+id/tvStuffDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="A selection of lingerie that fits like"
+            android:layout_gravity="center"
+            android:textSize="9sp"/>
+
+        <TextView
+            android:id="@+id/tvStuffDescriptionTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="no other"
+            android:layout_gravity="center"
+            android:textSize="9sp"/>
+
+        <TextView
+            android:id="@+id/tvExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_wthite_side_black"
+            android:layout_gravity="center"
+            android:textSize="10sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingEnd="10dp"
+            android:text="Explore Now"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -8,4 +8,18 @@
     <string name="tv_upTo">UP TO</string>
     <string name="tv_off70">70%OFF</string>
     <string name="tv_off85">85%OFF</string>
+    <string name="tv_skin">A selection of lingerie that fits like</string>
+    <string name="tv_skinTwo">no other.</string>
+    <string name="tv_explore">Explore Now</string>
+    <string name="tv_dryer">Personal care basics for you to</string>
+    <string name="tv_dryerTwo">look your best.</string>
+    <string name="tv_watches">Stunning timepieces that are sure</string>
+    <string name="tv_watchesTwo">to make a mark.</string>
+    <string name="tv_jewellery">Precious piece that bring together</string>
+    <string name="tv_jewelleryTwo">tradition and trend</string>
+    <string name="tv_audio">CliQ to get access to the best in</string>
+    <string name="tv_audioTwo">the world of sound</string>
+    <string name="tv_fragrance">c</string>
+    <string name="tv_fragranceTwo">spring in your step</string>
+
 </resources>
