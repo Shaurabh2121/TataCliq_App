@@ -17,9 +17,8 @@ import com.example.tatacliq.R;
 
 
 public class MyAccountFragment extends Fragment {
-
         private EditText metEmail, metPassword;
-        private Button mbtnFb, mbtnGoogle, mbtnLogin, mbtnTataCliq;
+        private Button mbtnFb, mbtnGoogle, mbtnLogin, mbtnTataCliq,mbtnCancel;
         private TextView mtvForgetPassword, mtvSignSocialAccount, mtvCallus, mtvTAndCondition;
 
 
@@ -52,5 +51,18 @@ public class MyAccountFragment extends Fragment {
             mtvCallus = view.findViewById(R.id.tvCallUs);
             mtvTAndCondition = view.findViewById(R.id.tvTAndCondition);
             mtvSignSocialAccount = view.findViewById(R.id.tvSignSocialAccount);
+            mbtnCancel=view.findViewById(R.id.btnCancel);
+
+//            ok.setOnClickListener( new View.OnClickListener(){
+//                public void onClick(View v){
+//                    getActivity().getFragmentManager().beginTransaction().remove(me).commit();
+//                }
+//            });
+//            mbtnCancel.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                     getActivity().getFragmentManager().beginTransaction().replace().commit();
+//                }
+//            });
         }
     }
