@@ -89,7 +89,7 @@ public class BrandsFragment extends Fragment {
         onResponseModelList.add(new OnResponseModel(R.drawable.earpods_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.traq_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.vivo_on));
-//        onResponseModelList.add(new OnResponseModel(R.drawable.taneira));
+        onResponseModelList.add(new OnResponseModel(R.drawable.taneira));
     }
 
     private void setRecyclerAdapterBrand4uData() {
@@ -118,7 +118,7 @@ public class BrandsFragment extends Fragment {
         brandSlideModelList.add(new BrandSlideModel(R.drawable.estside));
         brandSlideModelList.add(new BrandSlideModel(R.drawable.voltas));
         brandSlideModelList.add(new BrandSlideModel(R.drawable.croma));
-//        brandSlideModelList.add(new BrandSlideModel(R.drawable.titan));
+        brandSlideModelList.add(new BrandSlideModel(R.drawable.));
         brandSlideModelList.add(new BrandSlideModel(R.drawable.beko));
         brandSlideModelList.add(new BrandSlideModel(R.drawable.khai));
 
