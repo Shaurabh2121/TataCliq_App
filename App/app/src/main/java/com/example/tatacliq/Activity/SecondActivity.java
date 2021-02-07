@@ -3,6 +3,8 @@ package com.example.tatacliq.Activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import com.example.tatacliq.Fragment.BrandsFragment;
 import com.example.tatacliq.Fragment.CategoriesFragment;
 import com.example.tatacliq.Fragment.HomeFragment;
+import com.example.tatacliq.Fragment.HomeFragmentInsideWebView;
 import com.example.tatacliq.Fragment.MyAccountFragment;
 import com.example.tatacliq.Fragment.MyBagFragment;
 import com.example.tatacliq.R;
@@ -17,7 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SecondActivity extends AppCompatActivity {
     private BottomNavigationView bnv;
-
+//    private FragmentManager mFragmentListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,5 +52,13 @@ public class SecondActivity extends AppCompatActivity {
                 return true;
             }
         });
+//        mFragmentListener=getSupportFragmentManager();
+//        launchFragmentBrandWebView();
+
     }
+
+//    private void launchFragmentBrandWebView() {
+//        HomeFragmentInsideWebView homeFragmentInsideWebView=new HomeFragmentInsideWebView();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frameContainer, homeFragmentInsideWebView, "HomeFragmentWebView").addToBackStack("HomeFragmentWebView").commit();
+//    }
 }

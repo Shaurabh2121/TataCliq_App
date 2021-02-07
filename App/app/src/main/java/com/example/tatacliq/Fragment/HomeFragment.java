@@ -5,10 +5,15 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -17,6 +22,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.tatacliq.BrandNewOnCliq.OnAdapter;
 import com.example.tatacliq.BrandNewOnCliq.OnResponseModel;
+import com.example.tatacliq.HomeClickLister;
 import com.example.tatacliq.PersonalBasicsStuffs.PersonalBasicAdapter;
 import com.example.tatacliq.PersonalBasicsStuffs.PersonalBasicStuffs;
 import com.example.tatacliq.R;
@@ -32,7 +38,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomeClickLister {
 
     private RecyclerView mRecyclerWestSide;
     private ArrayList<WestsideItemClass> westsideItemClassList;
@@ -44,6 +50,11 @@ public class HomeFragment extends Fragment {
     private RecyclerView mRecyclerViewOn;
     private RecyclerView mRecyclerBasicStuffs;
     private List<PersonalBasicStuffs> personalBasicStuffsList;
+    private RelativeLayout mrelativeLayout;
+    private HomeClickLister homeClickLister;
+    private FrameLayout sFrameLayout;
+
+private FragmentManager fragmentManager;
 
 
     @Override
@@ -60,6 +71,8 @@ public class HomeFragment extends Fragment {
         viewPager2 = view.findViewById(R.id.viewPagerImageSlider);
         mRecyclerViewOn=view.findViewById(R.id.recyclerBrandNewOnCliq);
         mRecyclerBasicStuffs=view.findViewById(R.id.recyclerBasicStuffs);
+        mrelativeLayout=view.findViewById(R.id.relativeSBI);
+        sFrameLayout=view.findViewById(R.id.frameContainer);
         setWestSideRecyclerAdapter();
         setWestSideRecyclerData();
         setSliderAdapter();
@@ -68,7 +81,13 @@ public class HomeFragment extends Fragment {
         setRecyclerAdapterBrandOnNewCliqData();
         buildBasicStuffs();
         setRecyclerAdapterBasicStuffs();
+//       setFragment(new HomeFragmentInsideWebView());
     }
+
+//    private void setFragment(Fragment fragment) {
+//        FragmentTransaction fragmentTransaction=getChildFragmentManager().beginTransaction();
+//        fragmentTransaction.replace()
+//    }
 
 
     private void setSliderData() {
@@ -132,7 +151,7 @@ public class HomeFragment extends Fragment {
     private void setWestSideRecyclerData() {
         GridLayoutManager linearLayoutManager = new GridLayoutManager(getContext(), 1,
                 RecyclerView.HORIZONTAL, false);
-        WestSideAdapter westSideAdapter = new WestSideAdapter(westsideItemClassList);
+        WestSideAdapter westSideAdapter = new WestSideAdapter(westsideItemClassList,this);
         mRecyclerWestSide.setLayoutManager(linearLayoutManager);
         mRecyclerWestSide.setAdapter(westSideAdapter);
     }
@@ -195,4 +214,10 @@ public class HomeFragment extends Fragment {
             mRecyclerBasicStuffs.setLayoutManager(gridLayoutManager);
             mRecyclerBasicStuffs.setAdapter(adapter);
         }
+
+    @Override
+    public void onClickedWishListed(WestsideItemClass westsideItemClass) {
+        Toast.makeText(getContext(),"Name "+westsideItemClass.getCategoryText(),Toast.LENGTH_SHORT).show();
+//        sk=westsideItemClass.getCategoryText();
     }
+}
