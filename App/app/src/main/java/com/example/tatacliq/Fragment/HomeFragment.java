@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment implements HomeClickLister {
 private FragmentManager fragmentManager;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -186,7 +187,7 @@ private FragmentManager fragmentManager;
         onResponseModelList.add(new OnResponseModel(R.drawable.earpods_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.traq_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.vivo_on));
-//        onResponseModelList.add(new OnResponseModel(R.drawable.taneira));
+        onResponseModelList.add(new OnResponseModel(R.drawable.taneira_on));
     }
 
     private void setRecyclerAdapterBrandOnNewCliqData() {
