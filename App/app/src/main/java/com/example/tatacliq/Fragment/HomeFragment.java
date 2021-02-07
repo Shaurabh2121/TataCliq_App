@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
     private List<PersonalBasicStuffs> personalBasicStuffsList;
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -167,7 +168,7 @@ public class HomeFragment extends Fragment {
         onResponseModelList.add(new OnResponseModel(R.drawable.earpods_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.traq_on));
         onResponseModelList.add(new OnResponseModel(R.drawable.vivo_on));
-//        onResponseModelList.add(new OnResponseModel(R.drawable.taneira));
+        onResponseModelList.add(new OnResponseModel(R.drawable.taneira_on));
     }
 
     private void setRecyclerAdapterBrandOnNewCliqData() {
